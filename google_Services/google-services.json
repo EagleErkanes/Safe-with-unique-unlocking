@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "529601577500",
+    "firebase_url": "https://lightsafe-bc283-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "lightsafe-bc283",
+    "storage_bucket": "lightsafe-bc283.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529601577500:android:e74d2c6caf8c01941a15d9",
+        "android_client_info": {
+          "package_name": "com.example.bio_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKMc9IsADyftCp7LI_65eKKxqz7tVCpu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529601577500:android:90b4cf66b2b9b6a21a15d9",
+        "android_client_info": {
+          "package_name": "com.example.light_safe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKMc9IsADyftCp7LI_65eKKxqz7tVCpu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,2 @@
+D:/Alles for that project/light key/android/app/.cxx/Debug/3d3i3o6q/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Alles for that project/light key/android/app/.cxx/Debug/3d3i3o6q/armeabi-v7a/CMakeFiles/rebuild_cache.dir

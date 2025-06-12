@@ -1,0 +1,66 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"  // Flutter plugin
+    id 'com.google.gms.google-services'    // Firebase Google Services plugin
+}
+
+android {
+    namespace = "com.example.bio_app"       // Namespace на приложението
+    compileSdk = flutter.compileSdkVersion // Компилиращ SDK
+    ndkVersion = flutter.ndkVersion        // Версия на NDK
+
+    defaultConfig {
+        applicationId = "com.example.bio_app" // ID на приложението
+        minSdk = 23                            // Минимална SDK версия
+        targetSdk = flutter.targetSdkVersion  // Целева SDK версия
+        versionCode = flutter.versionCode     // Код на версията
+        versionName = flutter.versionName     // Име на версията
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner" // Това е тестовият Runner
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false                  // Без Proguard на този етап
+            shrinkResources false                // Изключване на премахването на неизползвани ресурси
+            signingConfig signingConfigs.debug  // Подписване за debug/release
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Път към основния Flutter проект
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.7.0') // Firebase BOM
+    implementation 'com.google.firebase:firebase-auth:22.1.0'           // Firebase Authentication
+    implementation 'com.google.firebase:firebase-database:20.2.2'       // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-storage:20.2.1'        // Firebase Storage
+    implementation 'com.google.firebase:firebase-firestore:24.7.1'      // Firebase Firestore (по избор)
+    // Зависимости за инструментални тестове
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+// Firebase специфични зависимости за тестове (ако използваш Firebase функционалности в тестовете)
+androidTestImplementation 'com.google.firebase:firebase-auth:22.1.0'
+androidTestImplementation 'com.google.firebase:firebase-database:20.2.2'
+
+// Test BOM (за консистентни версии на Firebase при тестове, като основния BOM)
+androidTestImplementation platform('com.google.firebase:firebase-bom:33.7.0')
+
+
+    // Зависимости за други библиотеки, ако са необходими
+    implementation 'androidx.core:core-ktx:1.10.1'
+}
+
+apply plugin: 'com.google.gms.google-services' // Firebase Google Services plugin
