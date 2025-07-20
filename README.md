@@ -14,12 +14,11 @@ Built using Arduino, EEPROM memory, Flutter-based app, and principles inspired b
 
 🛠️ Technologies Used
 
-- Arduino UNO – microcontroller for managing signal detection and control
+- Arduino Nano – microcontroller for managing signal detection and control
 - Photoresistor (LDR) – detects light signals
 - Solenoid Lock – opens when the correct signal is received
 - EEPROM – stores up to 3 unique light patterns
 - Flutter App – sends encoded light signals to the safe
-- Serial Communication – for debugging and feedback
 
 ---
 
